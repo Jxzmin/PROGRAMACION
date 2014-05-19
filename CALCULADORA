@@ -1,0 +1,92 @@
+<html >
+<head><title>Calculadora</title>
+</head>
+<body text="#ffffff" bgcolor="#000000" face="Arial">
+<script language="JavaScript" type="text/JavaScript">
+
+function pot() 
+{
+	var np = prompt("Ingrese exponente","")
+	document.Calc.ver.value = Math.pow(document.Calc.ver.value, np);
+}
+
+function raiz(value)
+{
+  var valStr = "" + value;
+
+        if (valStr.indexOf("N")>=0 || (value == 2*value && value == 1+value))
+
+                return "Error Raiz imaginaria";
+            else
+            {
+            	document.Calc.ver.value = Math.sqrt(document.Calc.ver.value);
+            }
+}
+</script>
+
+        <blockquote><b><center><font face="Elephant,Helvetica" size="6">CALULADORA</font></center></b> <br>
+        <form name="Calc">
+        <table border="3" align="center" style="padding: 5px; border: none; background: blue">         
+          <tr>
+            <td><input size="28" name="ver" style="background:skyblue; text-align:right"/></td></tr>
+          <tr>
+            <td style="width: 100%; hight:40px; text-align:center">
+                    <input onclick="Calc.ver.value += '1'" type="button" value="  1  " name="uno" />
+                    <input onclick="Calc.ver.value += '2'" type="button" value="  2  " name="dos" />
+                    <input onclick="Calc.ver.value += '3'" type="button" value="  3  " name="tres" />
+                    <input onclick="Calc.ver.value += ' + '" type="button" value="  +  " name="sumar" />
+            </td>
+          </tr>
+		  
+		  <tr>
+ 			<td style="width: 100%; hight:40px; text-align:center">
+                    <input onclick="Calc.ver.value += '4'" type="button" value="  4  " name="cuatro" />
+                    <input onclick="Calc.ver.value += '5'" type="button" value="  5  " name="cinco" />
+                    <input onclick="Calc.ver.value += '6'" type="button" value="  6  " name="seis" />
+                    <input onclick="Calc.ver.value += ' - '" type="button" value="  -  " name="restar" />
+            </td>
+          </tr>
+		  
+		  <tr> 
+		    <td style="width: 100%; hight:40px; text-align:center">
+                    <input onclick="Calc.ver.value += '7'" type="button" value="  7  " name="siete" />
+                    <input onclick="Calc.ver.value += '8'" type="button" value="  8  " name="ocho" />
+                    <input onclick="Calc.ver.value += '9'" type="button" value="  9  " name="nueve" />
+                    <input onclick="Calc.ver.value += ' * '" type="button" value="  *  " name="multiplicar" />
+            </td>
+          
+          <tr>
+            <td style="width: 100%; hight:40px; text-align:center">
+                    <input onclick="Calc.ver.value = ''" type="button" value="  C  " name="borrar" />
+                    <input onclick="Calc.ver.value += '0'" type="button" value="  0  " name="cero" />
+                    <input onclick="Calc.ver.value = eval(Calc.ver.value)" type="button" value="  =  " name="igual" />
+                    <input onclick="Calc.ver.value += ' / '" type="button" value="  /   " name="dividir" /></td></tr>
+
+		  <tr>             
+		    <td style="width: 100%; hight:40px; text-align:center"> 
+                    <input onclick="Calc.ver.value+=Math.E" type="button" name="e" value="e" />
+                    <button size="10" onclick="Calc.value=ver.value+=Math.PI" type="button" name="Pi" value="Pi"/>&#928;</button>
+                    <input onclick="pot()"  type="button" name="Pot" value="^"/>
+                     <input type="button" name="Raiz" value="Sqr" style="text-align:center" onclick="raiz()"/> 
+                    
+            </td>
+          </tr>
+
+          <tr> 
+            <td style="width: 100%; hight:40px; text-align:center">
+                    <input onclick="Calc.ver.value=Math.sin(Calc.ver.value*Math.PI/180)" type="button" name=Sen" value="Sen" />
+                    <input onclick="Calc.ver.value=Math.cos(Calc.ver.value*Math.PI/180)" type="button" name=Cos" value="Cos" />
+                    <input onclick="Calc.ver.value=Math.tan(Calc.ver.value)*Math.PI/180)" type="button" name=Tan" value="Tan"/>                  
+                    <input onclick="Calc.ver.value=eval(Math.abs(Calc.ver.value))" type="button" name=abs" value="Abs" /> 
+
+            </td>
+          </tr>                          
+        </form>
+      </td>
+    </tr>
+  </table>
+</blockquote>        
+</body>
+</html>
+
+
